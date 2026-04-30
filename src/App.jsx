@@ -16,6 +16,9 @@ import Reservations from './pages/Reservations';
 import Team from './pages/Team';
 import Checkout from './pages/Checkout';
 import Franchise from './pages/Franchise';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import CookiePolicy from './pages/CookiePolicy';
 
 function App() {
   const location = useLocation();
@@ -113,6 +116,9 @@ function App() {
                 <Route path="/team" element={<PageTransition><Team /></PageTransition>} />
                 <Route path="/franchise" element={<PageTransition><Franchise /></PageTransition>} />
                 <Route path="/checkout" element={<PageTransition><Checkout cart={cart} user={user} removeFromCart={removeFromCart} updateQty={updateQty} /></PageTransition>} />
+                <Route path="/privacy" element={<PageTransition><Privacy /></PageTransition>} />
+                <Route path="/terms" element={<PageTransition><Terms /></PageTransition>} />
+                <Route path="/cookie-policy" element={<PageTransition><CookiePolicy /></PageTransition>} />
               </Routes>
             </AnimatePresence>
           </main>

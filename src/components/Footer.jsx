@@ -127,9 +127,9 @@ const Footer = () => (
                     &copy; 2026 Gol Gol Gappe. All rights reserved. <br className="md:hidden" /> | <a href="https://digicoders.in/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline transition-all">Team DigiCoders</a>
                 </p>
                 <div className="flex gap-8 text-xs text-white/30">
-                    <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-                    <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-                    <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
+                    <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                    <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+                    <Link to="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</Link>
                 </div>
             </div>
         </div>

@@ -217,26 +217,7 @@ const Menu = ({ user, addToCart }) => {
                                         
                                         {/* ⭐ Offer UI removed - offers applied at checkout */}
 
-                                        <motion.button
-                                            whileTap={{ scale: 0.95 }}
-                                            disabled={!item.inStock}
-                                            onClick={() => {
-                                                if (!user) {
-                                                    window.location.href = '/login';
-                                                    return;
-                                                }
-                                                const finalPrice = item.discountPrice || item.basePrice;
-                                                addToCart({ ...item, price: finalPrice });
-                                                toast.success(`${item.name} added to cart!`);
-                                            }}
-                                            className={`w-full py-4 md:py-5 rounded-[1.5rem] md:rounded-[2rem] font-black uppercase tracking-widest text-[10px] md:text-xs transition-all shadow-xl ${
-                                                item.inStock 
-                                                    ? 'bg-secondary text-white hover:bg-primary hover:text-secondary cursor-pointer' 
-                                                    : 'bg-zinc-200 text-zinc-400 cursor-not-allowed'
-                                            }`}
-                                        >
-                                            {item.inStock ? 'Add to Plate' : 'Out of Stock'}
-                                        </motion.button>
+                                        
                                     </div>
                                 </motion.div>
                             ))}

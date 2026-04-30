@@ -69,7 +69,7 @@ const Navbar = ({ user, onLogout }) => {
                             <button onClick={onLogout} className="hidden sm:inline-block text-xs font-bold text-red-500 hover:text-red-700 uppercase tracking-widest">Logout</button>
                         </>
                     ) : (
-                        <Link to="/login" className="hidden sm:inline-block btn-primary px-6 py-2 text-sm">Login</Link>
+                        <Link></Link>
                     )}
                     <Link to="/reservations" className="hidden sm:inline-block btn-primary px-6 py-2 text-sm">Book Table</Link>
 
