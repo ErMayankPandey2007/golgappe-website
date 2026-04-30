@@ -1,0 +1,88 @@
+@import "tailwindcss";
+ 
+@theme {
+  --color-primary: #f59e0b;
+  --color-primary-dark: #b45309;
+  --color-secondary: #2d1b0d;
+  --color-accent: #65a30d;
+  --color-background: #fffcf5;
+  --color-surface: #ffffff;
+  --color-text-main: #1a0f08;
+  --color-text-muted: #6b4423;
+
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  :root {
+    --primary: #f59e0b;
+    --primary-dark: #b45309;
+    --secondary: #2d1b0d;
+    --accent: #65a30d;
+    --background: #fffcf5;
+    --surface: #ffffff;
+    --text-main: #1a0f08;
+    --text-muted: #6b4423;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 252, 245, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-dark {
+    background: rgba(45, 27, 13, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-primary text-secondary font-bold rounded-full transition-all duration-300 hover:bg-primary-dark hover:text-white hover:scale-105 active:scale-95 shadow-lg flex items-center gap-2;
+  }
+
+  .nav-link {
+    @apply text-secondary font-medium transition-colors hover:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
